@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
+import com.fasterxml.jackson.core.JsonParser.Feature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.ers.exception.BusinessException;
 import com.revature.ers.model.ErsUser;
@@ -24,7 +25,8 @@ public class UserController {
 	private ObjectMapper om = new ObjectMapper();
 	private UserService us = new UserService();
 
-	public void login(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {		
+	public void login(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {	
+			om.configure(Feature.AUTO_CLOSE_SOURCE, true);
 			BufferedReader reader = req.getReader();
 			StringBuilder sb = new StringBuilder();
 			String line = reader.readLine();
@@ -61,6 +63,7 @@ public class UserController {
 	}
 
 	public void create(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		om.configure(Feature.AUTO_CLOSE_SOURCE, true);
 		if(req.getMethod().equals("POST")) {		
 			BufferedReader reader = req.getReader();
 			StringBuilder sb = new StringBuilder();
