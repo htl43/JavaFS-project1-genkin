@@ -15,7 +15,7 @@
   </properties>
   
   <build>
-		<finalName>project-1</finalName>
+		<finalName>HelloJenkins</finalName>
   </build>
   
   <dependencies>
