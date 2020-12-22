@@ -15,7 +15,7 @@
   </properties>
   
   <build>
-  	<finalName>project1</finalName>
+  	<finalName>project1-htl43</finalName>
   </build>
   
   <dependencies>
