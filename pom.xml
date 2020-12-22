@@ -6,7 +6,7 @@
   <artifactId>project-1</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>Project 1</name>
+  <name>project-1</name>
   <description>Employee Reimbursement System</description>
   <!-- Setting up Java version 1.8 for project --> 
   <properties>
@@ -15,7 +15,7 @@
   </properties>
   
   <build>
-		<finalName>HelloJenkins</finalName>
+		<finalName>project-1</finalName>
   </build>
   
   <dependencies>
