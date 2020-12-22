@@ -10,3 +10,6 @@
 [INFO]        com.revature.ers.controllers.UserController       ErsUser [userId=7, username=emp1, password=, firstname=Mary, lastname=Grace, email=magr@outlook.com, role=ErsUserRole [userRoleId=1, userRole=EMPLOYEE]]             22-December-2020 Tuesday EST 04:02:47                
 [INFO]        com.revature.ers.controllers.UserController       <Login Succesfull!>             22-December-2020 Tuesday EST 04:03:43                
 [INFO]        com.revature.ers.controllers.UserController       ErsUser [userId=7, username=emp1, password=, firstname=Mary, lastname=Grace, email=magr@outlook.com, role=ErsUserRole [userRoleId=1, userRole=EMPLOYEE]]             22-December-2020 Tuesday EST 04:03:43                
+[INFO]        com.revature.ers.controllers.UserController       <Login Succesfull!>             22-December-2020 Tuesday EST 10:04:05                
+[INFO]        com.revature.ers.controllers.UserController       ErsUser [userId=7, username=emp1, password=, firstname=Mary, lastname=Grace, email=magr@outlook.com, role=ErsUserRole [userRoleId=1, userRole=EMPLOYEE]]             22-December-2020 Tuesday EST 10:04:05                
+[INFO]        com.revature.ers.controllers.EmployeeController       <Request All Reimbursment Successfully!>             22-December-2020 Tuesday EST 10:04:10                
