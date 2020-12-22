@@ -22,22 +22,21 @@ public class UserServlet extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		final String URI = req.getRequestURI();
-		PrintWriter pw = resp.getWriter();
-		pw.print("<h1>Hello from your doGet method from Project1! URI=" + URI + "</h1>");
-		resp.setStatus(202);
-//		resp.setContentType("application/json");
-//		resp.setStatus(404);
-//		final String URI = req.getRequestURI().replace("/project-1/user/", "");
-//		
-//		switch (URI) {
-//			case "login":
-//				uc.login(req, resp);
-//				break;
-//			case "create":
-//				uc.create(req,resp);
-//				break;
-//			}
+			
+		resp.setContentType("application/json");
+		resp.setStatus(404);
+		final String URI = req.getRequestURI().replace("/project-1/user/", "");
+//		PrintWriter pw = resp.getWriter();
+//		pw.print("<h1>Hello from your doGet method from Project1! URI=" + URI + "</h1>");
+		
+		switch (URI) {
+			case "login":
+				uc.login(req, resp);
+				break;
+			case "create":
+				uc.create(req,resp);
+				break;
+			}
 			
 	}
 
