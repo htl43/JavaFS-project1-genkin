@@ -10,17 +10,17 @@ public class Main {
 	private static UserService userService = new UserService();
 
 	public static void main(String[] args) {
-		ErsUserRole ersRole = new ErsUserRole(2, "");
-		ErsUser ersUser = new ErsUser("mng2", "mng2", "Ben", "Franklin", "benfr@gmail.com", ersRole);
-		String encrPass = userService.encryptPassword(ersUser.getPassword());
-		ersUser.setPassword(encrPass);
-		
-		 try {
-			userService.create(ersUser);
-			
-		} catch (BusinessException e) {
-			e.printStackTrace();
-		}
+//		ErsUserRole ersRole = new ErsUserRole(2, "");
+//		ErsUser ersUser = new ErsUser("mng2", "mng2", "Ben", "Franklin", "benfr@gmail.com", ersRole);
+//		String encrPass = userService.encryptPassword(ersUser.getPassword());
+//		ersUser.setPassword(encrPass);
+//		
+//		 try {
+//			userService.create(ersUser);
+//			
+//		} catch (BusinessException e) {
+//			e.printStackTrace();
+//		}
 	}
 
 }
