@@ -24,6 +24,7 @@ public class UserServlet extends HttpServlet {
 		resp.setContentType("application/json");
 		resp.setStatus(404);
 		final String URI = req.getRequestURI().replace("/project-1/user/", "");
+		System.out.println("URI=" + URI);
 		
 		switch (URI) {
 			case "login":
