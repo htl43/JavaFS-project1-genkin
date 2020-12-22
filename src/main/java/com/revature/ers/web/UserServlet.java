@@ -24,7 +24,7 @@ public class UserServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		final String URI = req.getRequestURI();
 		PrintWriter pw = resp.getWriter();
-		pw.print("<h1>Hello from project-1! URI=" + URI + "</h1>");
+		pw.print("<h1>Hello from your doGet method from Jenkin! URI=" + URI + "</h1>");
 		resp.setStatus(202);
 //		resp.setContentType("application/json");
 //		resp.setStatus(404);
