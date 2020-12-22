@@ -22,9 +22,9 @@ public class UserServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("application/json");
-		resp.setStatus(404);
+//		resp.setStatus(404);
 		final String URI = req.getRequestURI().replace("/project-1/user/", "");
-		resp.getWriter().print("The URI= " + URI);
+		
 		switch (URI) {
 			case "login":
 				uc.login(req, resp);
