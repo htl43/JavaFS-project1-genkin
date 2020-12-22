@@ -24,9 +24,7 @@ public class UserController {
 	private ObjectMapper om = new ObjectMapper();
 	private UserService us = new UserService();
 
-	public void login(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		if(req.getMethod().equals("POST")) {
-			
+	public void login(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {		
 			BufferedReader reader = req.getReader();
 			StringBuilder sb = new StringBuilder();
 			String line = reader.readLine();
@@ -59,18 +57,7 @@ public class UserController {
 				resp.getWriter().print(e.getMessage());
 				log.warn("<Login Failed!>");
 				log.warn(e.getMessage());
-			}	
-		} else {
-			HttpSession ses = req.getSession(false);
-			if (ses != null) {
-				ses.invalidate();
-			}
-			resp.setStatus(400);
-			resp.getWriter().print("Bad Requested Using Http Method");
-			log.warn("<Login Failed!>");
-			log.warn("Bad Requested Using Http Method");
-		}
-		
+			}			
 	}
 
 	public void create(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

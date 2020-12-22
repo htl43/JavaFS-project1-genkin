@@ -26,8 +26,8 @@ public class UserServlet extends HttpServlet {
 		resp.setContentType("application/json");
 		resp.setStatus(404);
 		final String URI = req.getRequestURI().replace("/project-1/user/", "");
-//		PrintWriter pw = resp.getWriter();
-//		pw.print("<h1>Hello from your doGet method from Project1! URI=" + URI + "</h1>");
+		PrintWriter pw = resp.getWriter();
+		pw.print("<h1>Hello from your doGet method from Project1! URI=" + URI + "</h1>");
 		
 		switch (URI) {
 			case "login":
