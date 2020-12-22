@@ -13,7 +13,7 @@
   </properties>
   
   <build>
-  	<finalName>project1-htl43</finalName>
+  	<finalName>project1</finalName>
   </build>
   
   <dependencies>
