@@ -1,0 +1,11 @@
+#username,
+#password {
+  display: block;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #e2e9e6;
+}
+
+#welcome-header {
+  color: #ff6000;
+}

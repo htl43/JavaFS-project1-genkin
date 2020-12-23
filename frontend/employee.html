@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Reimbursment System Web App</title>   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="employee.css">
+  </head>
+  <body id="emp-body">
+     <!-- Header & employee info -->
+    <div class="container" >
+      <div class="row">
+        <h3 class="col-sm-10">Welcome to Employee Account</h3>   
+        <button type="button" id="logout" class="btn btn-danger float-sm-right col-sm-1 btn-sm">
+          Logout
+        </button>
+      </div>
+      <br>
+      <div class="row">
+        <table class="table table-hover table-bordered col-sm-12" id="emp-table-info">
+          <thead class="emp-table-info-header">
+            <tr class="table-info">
+              <th>ID</th>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+              <th>Role</th>
+            </tr>
+          </thead>
+          <tbody id="emp-table-info-body"></tbody>
+        </table>
+      </div>
+    </div>
+    <br>
+     <!-- Employee Menu Option Div -->
+    <div class="container" id="emp-menu">
+      <select class="btn btn-info col-sm-4" id="emp-select">
+        <option value="menu" selected>Menu</option>
+        <option value="request">Request A Reimbursment</option>
+        <option value="view">View All Rebursment</option>
+      </select>  
+    </div>
+    <br>
+
+    <!-- Employee Menu Message Display Div -->
+    <div class="container" id="menu" hidden>
+    </div>
+
+     <!-- Employee Request Form for A Reimbursement Div -->
+    <div class="container" id="request-form" hidden>
+      <h5 id="form-header" class="col-md-12">Please fill out the form and submit</h3>   
+      <div class="d-flex flex-column" id="login-row">
+        <div class="form-group col-sm-8">
+          <label for="amount">Amount</label>
+          <input class="form-control " id="amount" type="text" placeholder="0.00">
+          <small id="amountHelp" class="helper">The amount of reimbursment must be a number that greater than 0</small>
+        </div>
+
+        <div class="form-group col-sm-3">
+          <label for="reimbursment-type">Select one</label> 
+          <select class="form-control btn btn-info" id="rb-type">
+            <option value="1">LODGING</option>
+            <option value="2">TRAVEL</option>
+            <option value="3">FOOD</option>
+            <option value="4">OTHER</option>
+          </select>
+        </div>
+        
+        <div class="form-group col-sm-8">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" rows="3"></textarea>
+            <small id="amountHelp" class="form-text text-muted">Give a short description if you want to notice our manager.</small>
+        </div>
+        <div class="form-group col-sm-4 ">
+          <button id="submit" class="btn btn-danger" disabled>Submit</button>
+        </div>            
+      </div>   
+    </div>
+    
+    <!-- Employee View Reimbursement Display Div -->
+    <div class="container" id="view-reimbs" hidden>
+      <div id="view-reimbs-message"></div>
+      <div class="row table-row">
+        <table class="table table-hover table-bordered col-sm-12" id="emp-table-view-reimbs" hidden>
+          <thead class="emp-table-view-reimbs-header">
+            <tr class="thead-dark">
+              <th>#Reimb</th>
+              <th>Submitted On</th>
+              <th>Amount</th>
+              <th>Type</th>
+              <th>Description</th>       
+              <th>Status</th>
+              <th>Resolved on</th>
+            </tr>
+          </thead>
+          <tbody id="emp-table-view-reimbs-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+
+    <script src="employee.js"></script>
+  </body>
+</html>
