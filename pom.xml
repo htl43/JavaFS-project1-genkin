@@ -16,7 +16,7 @@
   
   <build>
 		<finalName>project-1</finalName>
-</build>
+  </build>
   
   <dependencies>
   	<!-- List down all the dependencies you need for the project Maven will dowload it for you -->
