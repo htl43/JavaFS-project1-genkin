@@ -1,4 +1,4 @@
-const url = 'http://localhost:8080/project-1/';
+const url = 'http://18.191.207.214:8090/project-1/';
 document.getElementById("emp-body").onload = function() {loadData()};
 var user;
 

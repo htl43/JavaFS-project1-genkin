@@ -1,4 +1,4 @@
-const url = 'http://3.136.157.132:8085/project-1/';
+const url = 'http://18.191.207.214:8090/project-1/';
 
 document.getElementById("loginbtn").addEventListener('click', loginFunc);
 
