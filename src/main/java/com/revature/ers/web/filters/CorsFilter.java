@@ -40,6 +40,9 @@ public class CorsFilter implements Filter {
 		
 		res.setHeader("Access-Control-Allow-Origin", "http://htl-project1.s3-website-us-east-1.amazonaws.com"); // Allow all origins
 		
+		
+		res.setHeader("Access-Control-Allow-Origin", "null");
+		
 		res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, HEAD, OPTIONS");
 		// Allow specific HTTP Verbs
 		
