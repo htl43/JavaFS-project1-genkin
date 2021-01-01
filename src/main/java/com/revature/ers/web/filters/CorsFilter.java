@@ -38,7 +38,7 @@ public class CorsFilter implements Filter {
 		// headers, which is specific to HTTP
 		HttpServletResponse res = (HttpServletResponse) response;
 		
-		res.setHeader("Access-Control-Allow-Origin", "null"); // Allow all origins
+		res.setHeader("Access-Control-Allow-Origin", "*"); // Allow all origins
 		
 		res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD");
 		// Allow specific HTTP Verbs
@@ -47,7 +47,7 @@ public class CorsFilter implements Filter {
 				+ "Access-Control-Request-Method, Access-Control-Request-Headers");
 		// Allow specific HTTP Headers (there's a fair few)
 		
-		res.setHeader("Access-Control-Allow-Credentials", "true");
+//		res.setHeader("Access-Control-Allow-Credentials", "true");
 		// Credentials are allowed
 		
 		chain.doFilter(request, response);
