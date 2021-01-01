@@ -16,7 +16,10 @@ async function loginFunc() {
       method:"POST",
       mode: 'cors',
       headers: {
-        'Access-Control-Allow-Origin' : 'http://18.191.207.214:8090',
+        'Access-Control-Allow-Origin' : '*',
+        'Access-Control-Allow-Headers': '*',
+        "Access-Control-Allow-Credentials" : "true",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS, HEAD"
       },
       body: JSON.stringify(user),
       credentials: 'include',
