@@ -14,8 +14,9 @@ async function loginFunc() {
     console.log("url=" + url);
     let resp = await fetch(url+'user/login', {
       method:"POST",
+      mode: 'no-cors',
       body: JSON.stringify(user),
-      credentials: 'include',
+      credentials: 'same-origin',
       //Credentials:include will ensure that they cookie is captured, future fetch requests
       //will also require this value in order to send the cookie back. 
     });
