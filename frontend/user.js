@@ -16,7 +16,7 @@ async function loginFunc() {
       method:"POST",
       mode: 'no-cors',
       body: JSON.stringify(user),
-      credentials: 'same-origin',
+      credentials: 'include',
       //Credentials:include will ensure that they cookie is captured, future fetch requests
       //will also require this value in order to send the cookie back. 
     });
