@@ -19,7 +19,7 @@ async function loginFunc() {
         'Access-Control-Allow-Origin' : '*',
         'Access-Control-Allow-Headers': '*',
         "Access-Control-Allow-Credentials" : "true",
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS, HEAD"
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE,  HEAD"
       },
       body: JSON.stringify(user),
       credentials: 'include',
