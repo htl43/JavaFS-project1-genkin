@@ -14,11 +14,6 @@ async function loginFunc() {
     console.log("url=" + url);
     let resp = await fetch(url+'user/login', {
       method:"POST",
-      mode: 'cors',
-      headers: {
-        'Content-Type': 'application/json'
-        // 'Content-Type': 'application/x-www-form-urlencoded',
-      },
       body: JSON.stringify(user),
       credentials: 'include',
       //Credentials:include will ensure that they cookie is captured, future fetch requests
