@@ -14,6 +14,9 @@ async function loginFunc() {
     console.log("url=" + url);
     let resp = await fetch(url+'user/login', {
       method:"POST",
+      headers: {
+        "Access-Control-Allow-Origin": "http://htl-project1.s3-website-us-east-1.amazonaws.com"
+      },
       body: JSON.stringify(user),
       credentials: 'include',
       //Credentials:include will ensure that they cookie is captured, future fetch requests
