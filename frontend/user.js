@@ -14,7 +14,11 @@ async function loginFunc() {
     console.log("url=" + url);
     let resp = await fetch(url+'user/login', {
       method:"POST",
-      mode: 'no-cors',
+      mode: 'cors',
+      headers: {
+        'Access-Control-Allow-Origin' : '*',
+        'Access-Control-Allow-Headers': '*'
+      },
       body: JSON.stringify(user),
       credentials: 'include',
       //Credentials:include will ensure that they cookie is captured, future fetch requests
@@ -23,6 +27,7 @@ async function loginFunc() {
       if(resp.status===200){
         let data = await resp.json();
         let dataString = JSON.stringify(data);
+        console.log("data=" +dataString);
         localStorage["userData"] = dataString;
         if(data.role.userRoleId==1) {
           location.href="employee.html"; 
@@ -31,6 +36,7 @@ async function loginFunc() {
         }  
       }else{
         let message = await resp.text();
+        console.log("status code=" +resp.status);
         document.getElementById('login_message').innerText =  message + ". \nLogin failed. Please try again";
         document.getElementById('login_message').style.color = "red"; 
       }
