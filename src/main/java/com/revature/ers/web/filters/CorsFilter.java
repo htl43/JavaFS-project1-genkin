@@ -37,7 +37,7 @@ public class CorsFilter implements Filter {
 		// Which is important, because we are going to set
 		// headers, which is specific to HTTP
 		HttpServletResponse res = (HttpServletResponse) response;
-		res.setHeader("Access-Control-Allow-Origin", "null"); 
+		res.setHeader("Access-Control-Allow-Origin", "Origin"); 
 		
 		res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD");
 		// Allow specific HTTP Verbs
