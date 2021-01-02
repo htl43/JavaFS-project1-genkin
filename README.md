@@ -33,25 +33,25 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 
 ## Strech Goals:
 
-1. Replace JDBC with Hibernate to manage the database connection.
-2. Users can upload a document or image of their receipt when submitting reimbursements which can stored in the database and reviewed by a financial manager.
-3. Using Angular for Frontend
+- Replace JDBC with Hibernate to manage the database connection.
+- Users can upload a document or image of their receipt when submitting reimbursements which can stored in the database and reviewed by a financial manager.
+- Using Angular for Frontend
 
 ## Getting Started
 
-- Clone the project to your local machine and open it with a JDK
-- Install a Postgres database in local or remoted host(RDS)
-- Config database connecion url, username and password in package: com.revature.ers.utilities
-- Create database following:
+1 Clone the project to your local machine and open it with a JDK
+2 Install a Postgres database in local or remoted host(RDS)
+3 Config database connecion url, username and password in package: com.revature.ers.utilities
+4 Create database following:
 
 **ER Diagram**
 
 ![](./imgs/physical.jpg)
 
-- Maven Update to build dependencies
-- Install Tomcat on running enviroment
+5 Maven Update to build dependencies
+6 Install Tomcat on running enviroment
 
-### 1. Runing on Local Host
+### 7 Runing on Local Host
 
 - Open CorsFillter.java in com.reavature.ers.web.fillters
   - Change the res.setHeader("Access-Control-Allow-Origin", "null") for local machine
@@ -60,7 +60,7 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
   - Modify the const url for all javascript to localhost:8080
   - Open the user.html to start application
 
-### 2. Runing with AWS RDS, EC2, S3
+### 7 Runing with AWS RDS, EC2, S3
 
 - Upload frontend files to S3 bucket
   - Deploy a Static Website Hosting to get endpoint
