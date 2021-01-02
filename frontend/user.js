@@ -11,17 +11,15 @@ async function loginFunc() {
     password:userp
   };
   try {
-    console.log("url=" + url);
+    console.log("url get =" + url);
     let resp = await fetch(url+'user/login', {
       method:"POST",
-      headers: {
-        "Access-Control-Allow-Origin": "http://htl-project1.s3-website-us-east-1.amazonaws.com"
-      },
       body: JSON.stringify(user),
       credentials: 'include',
       //Credentials:include will ensure that they cookie is captured, future fetch requests
       //will also require this value in order to send the cookie back. 
     });
+    console.log(resp);
       if(resp.status===200){
         let data = await resp.json();
         let dataString = JSON.stringify(data);
