@@ -79,11 +79,11 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 - Create a new freestyle item
 - Config for Source Code Management which the Repository URL
 - Add the command Execute Shell in Buid tab:
-  {
+  ```
   mvn clean package
   rm -f /**/tomcat9/webapps/_.war
   mv target/_.war /**/tomcat9/webapps/
-  }
+  ```
 - Save and run "Build Now"
 - Open Website Hosting endpoint in S3 to start application
 
