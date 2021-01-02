@@ -39,19 +39,19 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 
 ## Getting Started
 
-1 Clone the project to your local machine and open it with a JDK
-2 Install a Postgres database in local or remoted host(RDS)
-3 Config database connecion url, username and password in package: com.revature.ers.utilities
-4 Create database following:
+1. Clone the project to your local machine and open it with a JDK
+2. Install a Postgres database in local or remoted host(RDS)
+3. Config database connecion url, username and password in package: com.revature.ers.utilities
+4. Create database following:
 
 **ER Diagram**
 
 ![](./imgs/physical.jpg)
 
-5 Maven Update to build dependencies
-6 Install Tomcat on running enviroment
+5. Maven Update to build dependencies
+6. Install Tomcat on running enviroment
 
-### 7 Runing on Local Host
+### 7. Runing on Local Host
 
 - Open CorsFillter.java in com.reavature.ers.web.fillters
   - Change the res.setHeader("Access-Control-Allow-Origin", "null") for local machine
@@ -60,7 +60,7 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
   - Modify the const url for all javascript to localhost:8080
   - Open the user.html to start application
 
-### 7 Runing with AWS RDS, EC2, S3
+### 7. Runing with AWS RDS, EC2, S3
 
 - Upload frontend files to S3 bucket
   - Deploy a Static Website Hosting to get endpoint
