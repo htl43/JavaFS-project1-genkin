@@ -42,8 +42,9 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 - Clone the project to your local machine and open it with a JDK
 - Install a Postgres database in local or remoted host(RDS)
 - Config database connecion url, username and password in package: com.revature.ers.utilities
-- Create database following the ER Diagram:
-  **ER Diagram**
+- Create database following:
+
+**ER Diagram**
 
 ![](./imgs/physical.jpg)
 
