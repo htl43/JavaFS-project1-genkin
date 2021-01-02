@@ -16,19 +16,20 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 - Web: HTML, CSS, Bootstrap, JavaScript, Fetch API
 - Version Control Github
 - Jenkins pipline
-- Amazon RDS
-- Amazon EC2
-- Amazon S3
+- Remote cloud database with Amazon RDS
+- Virtual machine with Amazon EC2
+- Host static website with Amazon S3
 
 ## Features
 
-1. Developer can use POSTMAN to create employee or manager account through a end point
-2. Employee or manager can login to their account by using website
-3. Employee and manager can see their profile after login
-4. Employee can submit a new reimbursment and view all their existed reimbursments.
-5. Manager can view all reimbursments
-6. Manager can filter past or pending reimbursments
-7. Manager can apporve or deny a pending reimbursment
+1. Constructing an End point for create User Account by using Postman
+2. Encrypted password before storing in database
+3. Functionality for User login to account from website
+4. Session is stored for User credential after login
+5. Ability for Employee Account can submit a reimbursment or view them all.
+6. Ability for Manager Account can view all reimbursments
+7. Ability for Manager can filter past or pending reimbursments
+8. Ability for Manager can apporve or deny a pending reimbursment
 
 ## Strech Goals:
 
@@ -38,4 +39,51 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 
 ## Getting Started
 
-1. Clone the project to your local machine
+- Clone the project to your local machine and open it with a JDK
+- Install a Postgres database in local or remoted host(RDS)
+- Config database connecion url, username and password in package: com.revature.ers.utilities
+- Create database following the ER Diagram:
+  **ER Diagram**
+
+![](./imgs/physical.jpg)
+
+- Maven Update to build dependencies
+- Install Tomcat on running enviroment
+
+1. Runing on Local Host
+
+- Open CorsFillter.java in com.reavature.ers.web.fillters
+- Change the res.setHeader("Access-Control-Allow-Origin", "null") for local machine
+- Run Maven project on local Tomcat server
+- Open frontend folder
+- Modify the const url for all javascript to localhost:8080
+- Open the user.html to start application
+
+2. Runing with AWS RDS, EC2, S3
+
+- Upload frontend files to S3 bucket
+- Deploy a Static Website Hosting to get endpoint
+- Setting permissions: public access, bucket policy and Cross-origin resource sharing (CORS)
+- Open CorsFillter.java in com.reavature.ers.web.fillters
+- Change the res.setHeader("Access-Control-Allow-Origin", //hosting endpoint//) for local machine
+- Have RDS runing
+- Have EC2 runing and get public IP address
+- Have Tomcat 9 runing on EC2 with its own port
+- Have Jenkins install and running
+- Config EC2 Inbound and Outbound for Jenkins, Tomcat, Postgres and other trafics
+- Create a repository on github account
+- Add and push project to the repository
+- Adding webhook to the repository that connect to Jenkins IP address
+- Login to the admin account on Jenkin server
+- Create a new freestyle item
+- Config for Source Code Management which the Repository URL
+- Add the command Execute Shell in Buid tab:
+  {
+  mvn clean package
+  rm -f /**/tomcat9/webapps/_.war
+  mv target/_.war /**/tomcat9/webapps/
+  }
+- Save and run "Build Now"
+- Open Website Hosting endpoint in S3 to start application
+
+## Usage
