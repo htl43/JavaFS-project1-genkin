@@ -54,7 +54,7 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 ### 1. Runing on Local Host
 
 - Open CorsFillter.java in com.reavature.ers.web.fillters
-  - Change the res.setHeader("Access-Control-Allow-Origin", "null") for local machine
+- Change the res.setHeader("Access-Control-Allow-Origin", "null") for local machine
 - Run Maven project on local Tomcat server
 - Open frontend folder
 - Modify the const url for all javascript to localhost:8080
