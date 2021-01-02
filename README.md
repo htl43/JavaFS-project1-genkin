@@ -51,16 +51,16 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 - Maven Update to build dependencies
 - Install Tomcat on running enviroment
 
-1. Runing on Local Host
+### 1. Runing on Local Host
 
 - Open CorsFillter.java in com.reavature.ers.web.fillters
-- Change the res.setHeader("Access-Control-Allow-Origin", "null") for local machine
+  - Change the res.setHeader("Access-Control-Allow-Origin", "null") for local machine
 - Run Maven project on local Tomcat server
 - Open frontend folder
 - Modify the const url for all javascript to localhost:8080
 - Open the user.html to start application
 
-2. Runing with AWS RDS, EC2, S3
+### 2. Runing with AWS RDS, EC2, S3
 
 - Upload frontend files to S3 bucket
 - Deploy a Static Website Hosting to get endpoint
