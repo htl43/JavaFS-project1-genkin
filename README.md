@@ -7,3 +7,10 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 **Activity Diagram**
 
 ![](./imgs/activity.jpg)
+
+## Technologies / Dependencies
+
+- Maven build automation tool
+- JDBC and Postgres database
+- Servlet and Tomcat server
+- Web: HTML, CSS, Bootstrap, JavaScript, Fetch API
