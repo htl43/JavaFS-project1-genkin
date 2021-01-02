@@ -54,37 +54,37 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 ### 1. Runing on Local Host
 
 - Open CorsFillter.java in com.reavature.ers.web.fillters
-- Change the res.setHeader("Access-Control-Allow-Origin", "null") for local machine
+  - Change the res.setHeader("Access-Control-Allow-Origin", "null") for local machine
 - Run Maven project on local Tomcat server
 - Open frontend folder
-- Modify the const url for all javascript to localhost:8080
-- Open the user.html to start application
+  - Modify the const url for all javascript to localhost:8080
+  - Open the user.html to start application
 
 ### 2. Runing with AWS RDS, EC2, S3
 
 - Upload frontend files to S3 bucket
-- Deploy a Static Website Hosting to get endpoint
-- Setting permissions: public access, bucket policy and Cross-origin resource sharing (CORS)
+  - Deploy a Static Website Hosting to get endpoint
+  - Setting permissions: public access, bucket policy and Cross-origin resource sharing (CORS)
 - Open CorsFillter.java in com.reavature.ers.web.fillters
-- Change the res.setHeader("Access-Control-Allow-Origin", //hosting endpoint//) for local machine
-- Have RDS runing
-- Have EC2 runing and get public IP address
-- Have Tomcat 9 runing on EC2 with its own port
-- Have Jenkins install and running
-- Config EC2 Inbound and Outbound for Jenkins, Tomcat, Postgres and other trafics
+  - Change the res.setHeader("Access-Control-Allow-Origin", //hosting endpoint//) for local machine
+- Setup RDS runing
+- Setup EC2 runing and get public IP address
+  - Install Jenkins and run service on EC2
+  - Install Tomcat9 and run service on EC2 with config own port
+  - Config EC2 Inbound and Outbound for Jenkins, Tomcat, Postgres and other trafics
 - Create a repository on github account
-- Add and push project to the repository
-- Adding webhook to the repository that connect to Jenkins IP address
+  - Add and push project to the repository
+  - Adding webhook to the repository that connect to Jenkins IP address
 - Login to the admin account on Jenkin server
-- Create a new freestyle item
-- Config for Source Code Management which the Repository URL
-- Add the command Execute Shell in Buid tab:
+  - Create a new freestyle item
+  - Config for Source Code Management which the Repository URL
+  - Add the command Execute Shell in Buid tab:
   ```
   mvn clean package
   rm -f /**/tomcat9/webapps/_.war
   mv target/_.war /**/tomcat9/webapps/
   ```
-- Save and run "Build Now"
+  - Save and run "Build Now"
 - Open Website Hosting endpoint in S3 to start application
 
 ## Usage
