@@ -99,7 +99,7 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 
 3. Select **Request A Reimbursment** from Dropdown Menu, fill in information and click **Submit** button. Click **OK** to confirm your submit.
 
-   ![](./imgs/emp-login.jpg)
+   ![](./imgs/submit-rib.jpg)
 
 4. Select **View All Reimbursment** from Dropdown Menu to view all your submited reimbursment
 
@@ -119,7 +119,7 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 
 8. Select **View Past Reimbursment** from Dropdown Menu to view all past reimbursment
 
-   ![](./imgs/mng-viepast.jpg)
+   ![](./imgs/mng-viewpast.jpg)
 
 ## License
 
