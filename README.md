@@ -66,7 +66,7 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
   - Deploy a Static Website Hosting to get endpoint
   - Setting permissions: public access, bucket policy and Cross-origin resource sharing (CORS)
 - Open CorsFillter.java in com.reavature.ers.web.fillters
-  - Change the res.setHeader("Access-Control-Allow-Origin", //hosting endpoint//) for local machine
+  - Change the res.setHeader("Access-Control-Allow-Origin", _"hosting endpoint"_) for local machine
 - Setup RDS runing
 - Setup EC2 runing and get public IP address
   - Install Jenkins and run service on EC2
@@ -88,3 +88,32 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 - Open Website Hosting endpoint in S3 to start application
 
   ## Usage
+
+1. Use Postman to create user account for employee
+   ![](./imgs/create.jpg)
+
+2. Go to website and login with your created account
+   ![](./imgs/emp-login.jpg)
+
+3. Select **Request A Reimbursment** from Dropdown Menu, fill in information and click **Submit** button. Click **OK** to confirm your submit.
+   ![](./imgs/emp-login.jpg)
+
+4. Select **View All Reimbursment** from Dropdown Menu to view all your submited reimbursment
+   ![](./imgs/emp-view.jpg)
+
+5. Login to the app with a manager account
+   ![](./imgs/mng-login.jpg)
+
+6. Select **View All Reimbursment** from Dropdown Menu to view all employee submited reimbursment
+   ![](./imgs/mng-viewall.jpg)
+
+7. Select **View Pending Reimbursment** from Dropdown Menu to view all pending reimbursment.
+   Choose Reimbursment Id and approved or deny status, then click **confirm**
+   ![](./imgs/mng-dec.jpg)
+
+8. Select **View Past Reimbursment** from Dropdown Menu to view all past reimbursment
+   ![](./imgs/mng-viepast.jpg)
+
+## License
+
+MIT

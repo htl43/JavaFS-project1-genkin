@@ -1,9 +1,7 @@
 package com.revature.ers.web;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +11,6 @@ import org.apache.log4j.Logger;
 
 import com.revature.ers.controllers.UserController;
 
-import sun.misc.UCDecoder;
 
 public class UserServlet extends HttpServlet {
 	
