@@ -89,7 +89,7 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 
   ## Usage
 
-1. Use Postman to create user account for employee
+1. Use Postman to create employee or manager account
    ![](./imgs/create.jpg)
 
 2. Go to website and login with your created account
